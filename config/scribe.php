@@ -14,7 +14,7 @@ return [
     /*
      * A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
      */
-    'description' => 'This is a description of our API.',
+    'description' => '',
 
     /*
      * The base URL displayed in the docs. If this is empty, Scribe will use the value of config('app.url').
