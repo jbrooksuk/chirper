@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreChirpRequest;
-use App\Http\Requests\UpdateChirpRequest;
 use App\Http\Resources\ChirpResource;
 use App\Models\Chirp;
 use Illuminate\Http\Request;

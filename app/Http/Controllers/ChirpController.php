@@ -62,6 +62,7 @@ class ChirpController extends Controller
      *
      * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\RedirectResponse
+     *
      * @throws AuthorizationException
      */
     public function destroy(Chirp $chirp)
