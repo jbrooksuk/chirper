@@ -43,7 +43,7 @@ const editing = ref(false);
                         <button class="block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 transition duration-150 ease-in-out" @click="editing = true">
                             Edit
                         </button>
-                        <DropdownLink as="button" :href="route('chirps.destroy', chirp.id)" method="delete">
+                        <DropdownLink :href="route('chirps.destroy', chirp.id)" method="delete">
                             Delete
                         </DropdownLink>
                     </template>
