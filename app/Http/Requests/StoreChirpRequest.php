@@ -13,7 +13,7 @@ class StoreChirpRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class StoreChirpRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'message' => 'required|string|max:255',
         ];
     }
 }

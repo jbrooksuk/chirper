@@ -54,7 +54,7 @@ class ChirpController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateChirpRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\Response
      */
