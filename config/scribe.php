@@ -256,7 +256,7 @@ return [
     'intro_text' => <<<'INTRO'
 This documentation aims to provide all the information you need to work with our API.
 
-<aside><strong>Hello, eagle-eyed developer!</strong> Please say hi if you see me around!</aside>
+<aside>👋 <strong>Hello, eagle-eyed developer!</strong> Please say hi if you see me around!</aside>
 INTRO
     ,
 
