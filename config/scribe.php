@@ -4,7 +4,7 @@ use Knuckles\Scribe\Extracting\Strategies;
 
 return [
 
-    'theme' => 'default',
+    'theme' => 'elements',
 
     /*
      * The HTML <title> for the generated documentation. If this is empty, Scribe will infer it from config('app.name').
