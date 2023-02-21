@@ -256,8 +256,7 @@ return [
     'intro_text' => <<<'INTRO'
 This documentation aims to provide all the information you need to work with our API.
 
-<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
-You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<aside><strong>Hello, eagle-eyed developer!</strong> Please say hi if you see me around!</aside>
 INTRO
     ,
 
@@ -279,7 +278,7 @@ INTRO
      * Setting `laravel.add_routes` to true (above) will also add a route for the collection.
      */
     'postman' => [
-        'enabled' => true,
+        'enabled' => false,
 
         /*
          * Manually override some generated content in the spec. Dot notation is supported.
@@ -321,6 +320,7 @@ INTRO
          * Note: you must include the initial '/' when writing an endpoint.
          */
         'order' => [
+            'Chirps',
             // 'This group will come first',
             // 'This group will come next' => [
             //     'POST /this-endpoint-will-comes-first',
