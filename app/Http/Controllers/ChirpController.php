@@ -37,8 +37,6 @@ class ChirpController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, Chirp $chirp)
@@ -57,7 +55,6 @@ class ChirpController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\RedirectResponse
      *
      * @throws AuthorizationException

@@ -22,7 +22,6 @@ class SendChirpCreatedNotifications implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @param  \App\Events\ChirpCreated  $event
      * @return void
      */
     public function handle(ChirpCreated $event)
