@@ -28,6 +28,16 @@ class ChirpController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Chirp $chirp)
+    {
+        return ChirpResource::make($chirp);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @return \Illuminate\Http\Response
@@ -36,16 +46,6 @@ class ChirpController extends Controller
     {
         $chirp = $request->user()->chirps()->create($request->validated());
 
-        return ChirpResource::make($chirp);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Chirp $chirp)
-    {
         return ChirpResource::make($chirp);
     }
 
