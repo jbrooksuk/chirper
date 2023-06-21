@@ -24,7 +24,7 @@ class StoreChirpRequest extends FormRequest
     public function rules()
     {
         return [
-            'message' => 'required|string|max:255',
+            'message' => ['required', 'string', 'max:255'],
         ];
     }
 }
