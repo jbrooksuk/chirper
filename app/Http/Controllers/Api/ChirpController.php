@@ -7,13 +7,12 @@ use App\Http\Requests\StoreChirpRequest;
 use App\Http\Resources\ChirpResource;
 use App\Models\Chirp;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ChirpController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {
@@ -29,20 +28,16 @@ class ChirpController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function show(Chirp $chirp)
+    public function show(Chirp $chirp): Response
     {
         return ChirpResource::make($chirp);
     }
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function store(StoreChirpRequest $request)
+    public function store(StoreChirpRequest $request): Response
     {
         $chirp = $request->user()->chirps()->create($request->validated());
 
@@ -51,10 +46,8 @@ class ChirpController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Chirp $chirp)
+    public function update(Request $request, Chirp $chirp): Response
     {
         $this->authorize('update', $chirp);
 
@@ -65,10 +58,8 @@ class ChirpController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function destroy(Chirp $chirp)
+    public function destroy(Chirp $chirp): Response
     {
         $this->authorize('delete', $chirp);
 
