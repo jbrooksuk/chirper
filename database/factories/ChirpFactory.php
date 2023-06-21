@@ -19,7 +19,7 @@ class ChirpFactory extends Factory
     {
         return [
             'user_id' => User::factory()->create(),
-            'message' => $this->faker->sentences(2, true),
+            'message' => fake()->sentences(2, true),
         ];
     }
 }
