@@ -7,7 +7,6 @@ use App\Http\Requests\StoreChirpRequest;
 use App\Http\Resources\ChirpResource;
 use App\Models\Chirp;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class ChirpController extends Controller
 {
