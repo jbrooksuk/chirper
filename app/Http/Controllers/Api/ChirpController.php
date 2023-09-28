@@ -29,7 +29,7 @@ class ChirpController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Chirp $chirp): Response
+    public function show(Chirp $chirp): ChirpResource
     {
         return ChirpResource::make($chirp);
     }
@@ -37,7 +37,7 @@ class ChirpController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreChirpRequest $request): Response
+    public function store(StoreChirpRequest $request): ChirpResource
     {
         $chirp = $request->user()->chirps()->create($request->validated());
 
@@ -47,7 +47,7 @@ class ChirpController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Chirp $chirp): Response
+    public function update(Request $request, Chirp $chirp): ChirpResource
     {
         $this->authorize('update', $chirp);
 
@@ -59,7 +59,7 @@ class ChirpController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Chirp $chirp): Response
+    public function destroy(Chirp $chirp)
     {
         $this->authorize('delete', $chirp);
 
