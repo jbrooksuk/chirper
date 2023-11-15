@@ -17,8 +17,12 @@ class ChirpController extends Controller
     {
         $chirps = Chirp::query()
             ->with('user')
-            ->when($request->user_id, fn ($query, $userId) => $query->where('user_id', $userId))
-            ->when($request->search, fn ($query, $search) => $query->where('message', 'like', "%{$search}%"))
+            ->when($request->user_id,
+                fn ($query, $userId) => $query->where('user_id', $userId)
+            )
+            ->when($request->search,
+                fn ($query, $search) => $query->where('message', 'like', "%{$search}%")
+            )
             ->latest()
             ->paginate($request->input('per_page', 25));
 
@@ -38,7 +42,9 @@ class ChirpController extends Controller
      */
     public function store(StoreChirpRequest $request): ChirpResource
     {
-        $chirp = $request->user()->chirps()->create($request->validated());
+        $chirp = $request->user()
+            ->chirps()
+            ->create($request->validated());
 
         return ChirpResource::make($chirp);
     }
