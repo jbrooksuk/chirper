@@ -439,4 +439,5 @@ INTRO
      * If you only use one db connection, you can leave this as is.
      */
     'database_connections_to_transact' => [config('database.default')],
+    'external' => ['html_attributes' => []],
 ];
