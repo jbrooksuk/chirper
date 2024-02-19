@@ -15,4 +15,14 @@ class StoreChirpRequest extends FormRequest
             'message' => ['required', 'string', 'max:255'],
         ];
     }
+
+    public function bodyParameters()
+    {
+        return [
+            'message' => [
+                'description' => 'The message of the Chirp',
+                'example' => 'Hello, PHP UK!',
+            ],
+        ];
+    }
 }
